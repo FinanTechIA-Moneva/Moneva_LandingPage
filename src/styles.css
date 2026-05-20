@@ -1,1 +1,571 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  --moneva-primary: #00c896;
+  --moneva-primary-dark: #009f78;
+  --moneva-secondary: #16324f;
+  --moneva-dark: #071f33;
+  --moneva-light: #f4fbf8;
+  --moneva-card: #ffffff;
+  --moneva-muted: #6c7a89;
+  --moneva-yellow: #ffd166;
+  --moneva-pink: #ff6b9a;
+  --moneva-shadow: 0 20px 60px rgba(7, 31, 51, 0.12);
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--moneva-dark);
+  background: var(--moneva-light);
+}
+
+.moneva-navbar {
+  background: rgba(244, 251, 248, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 200, 150, 0.12);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  color: var(--moneva-secondary);
+}
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--moneva-primary), var(--moneva-primary-dark));
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 200, 150, 0.35);
+}
+
+.nav-link {
+  color: var(--moneva-secondary);
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--moneva-primary-dark);
+}
+
+.btn-moneva-primary {
+  background: linear-gradient(135deg, var(--moneva-primary), var(--moneva-primary-dark));
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.8rem 1.4rem;
+  box-shadow: 0 14px 35px rgba(0, 200, 150, 0.28);
+}
+
+.btn-moneva-primary:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-moneva-outline {
+  border: 2px solid rgba(0, 200, 150, 0.35);
+  color: var(--moneva-secondary);
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.75rem 1.4rem;
+}
+
+.btn-moneva-outline:hover {
+  background: white;
+  color: var(--moneva-primary-dark);
+}
+
+.hero-section {
+  padding: 150px 0 90px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(0, 200, 150, 0.20), transparent 30%),
+    radial-gradient(circle at 90% 10%, rgba(255, 209, 102, 0.25), transparent 28%),
+    linear-gradient(180deg, #f4fbf8 0%, #ffffff 100%);
+  overflow: hidden;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: white;
+  color: var(--moneva-primary-dark);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: var(--moneva-shadow);
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1;
+  font-weight: 900;
+  letter-spacing: -2px;
+  color: var(--moneva-secondary);
+}
+
+.hero-title span {
+  color: var(--moneva-primary-dark);
+}
+
+.hero-text {
+  font-size: 1.18rem;
+  color: var(--moneva-muted);
+  margin: 1.5rem 0 2rem;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stats strong {
+  color: var(--moneva-secondary);
+  font-size: 1.4rem;
+}
+
+.hero-stats span {
+  color: var(--moneva-muted);
+  font-weight: 600;
+}
+
+.phone-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-card {
+  width: min(360px, 100%);
+  min-height: 670px;
+  background: #071f33;
+  border-radius: 45px;
+  padding: 1rem;
+  box-shadow: 0 30px 80px rgba(7, 31, 51, 0.28);
+  color: white;
+  position: relative;
+  border: 10px solid #0d2b45;
+}
+
+.phone-top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.phone-top span {
+  width: 90px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.app-header small {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.app-header h4 {
+  margin: 0;
+  font-weight: 800;
+}
+
+.wallace-mini {
+  width: 52px;
+  height: 52px;
+  background: var(--moneva-pink);
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  font-size: 1.5rem;
+}
+
+.balance-card {
+  margin: 1rem;
+  padding: 1.4rem;
+  border-radius: 28px;
+  background: linear-gradient(135deg, var(--moneva-primary), var(--moneva-primary-dark));
+}
+
+.balance-card span {
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+.balance-card h2 {
+  font-weight: 900;
+  margin: 0.5rem 0;
+}
+
+.balance-card p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.chart-card {
+  margin: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.chart-circle {
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle, #071f33 55%, transparent 56%),
+    conic-gradient(var(--moneva-yellow) 68%, rgba(255,255,255,0.16) 0);
+  font-weight: 900;
+}
+
+.chart-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.transaction-list {
+  padding: 0 1rem 1rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.transaction-item {
+  background: white;
+  color: var(--moneva-dark);
+  border-radius: 22px;
+  padding: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.transaction-item i {
+  font-size: 1.6rem;
+}
+
+.transaction-item div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-item span {
+  color: var(--moneva-muted);
+  font-size: 0.85rem;
+}
+
+.income {
+  color: var(--moneva-primary);
+}
+
+.expense {
+  color: var(--moneva-pink);
+}
+
+.trophy {
+  color: var(--moneva-yellow);
+}
+
+.floating-card {
+  position: absolute;
+  background: white;
+  color: var(--moneva-secondary);
+  border-radius: 20px;
+  padding: 0.9rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+  box-shadow: var(--moneva-shadow);
+}
+
+.floating-card i {
+  color: var(--moneva-primary-dark);
+  font-size: 1.3rem;
+}
+
+.floating-card-one {
+  top: 90px;
+  left: 0;
+}
+
+.floating-card-two {
+  bottom: 130px;
+  right: 0;
+}
+
+.section-padding {
+  padding: 90px 0;
+  background: white;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 3rem;
+}
+
+.section-heading span {
+  color: var(--moneva-primary-dark);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  color: var(--moneva-secondary);
+  margin: 0.7rem 0 1rem;
+}
+
+.section-heading p {
+  color: var(--moneva-muted);
+  font-size: 1.1rem;
+}
+
+.feature-card,
+.difference-card {
+  height: 100%;
+  background: var(--moneva-light);
+  border: 1px solid rgba(0, 200, 150, 0.12);
+  border-radius: 30px;
+  padding: 2rem;
+  transition: 0.25s ease;
+}
+
+.feature-card:hover,
+.difference-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--moneva-shadow);
+  background: white;
+}
+
+.feature-card i,
+.difference-card i {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--moneva-primary), var(--moneva-primary-dark));
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  margin-bottom: 1.3rem;
+}
+
+.feature-card h3,
+.difference-card h3 {
+  font-weight: 900;
+  color: var(--moneva-secondary);
+  font-size: 1.25rem;
+}
+
+.feature-card p,
+.difference-card p {
+  color: var(--moneva-muted);
+  margin: 0;
+}
+
+.education-section {
+  padding: 90px 0;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(0, 200, 150, 0.18), transparent 30%),
+    #f4fbf8;
+}
+
+.learning-panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.learning-item {
+  display: flex;
+  gap: 1rem;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 26px;
+  box-shadow: 0 10px 30px rgba(7, 31, 51, 0.06);
+  border: 1px solid rgba(0, 200, 150, 0.10);
+}
+
+.learning-item.active {
+  background: var(--moneva-secondary);
+  color: white;
+}
+
+.learning-item span {
+  min-width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: var(--moneva-primary);
+  color: white;
+  font-weight: 900;
+}
+
+.learning-item h4 {
+  font-size: 1rem;
+  font-weight: 900;
+  margin: 0 0 0.3rem;
+}
+
+.learning-item p {
+  margin: 0;
+  color: var(--moneva-muted);
+}
+
+.learning-item.active p {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.cta-section {
+  padding: 90px 0;
+  background: white;
+}
+
+.cta-card {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.22), transparent 28%),
+    linear-gradient(135deg, var(--moneva-primary), var(--moneva-secondary));
+  color: white;
+  border-radius: 40px;
+  padding: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: var(--moneva-shadow);
+}
+
+.cta-card span {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cta-card h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  margin: 0.7rem 0 1rem;
+}
+
+.cta-card p {
+  margin: 0;
+  max-width: 650px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cta-buttons .btn {
+  border-radius: 999px;
+  font-weight: 800;
+}
+
+.footer {
+  background: #071f33;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer p {
+  color: rgba(255, 255, 255, 0.64);
+  margin: 0.3rem 0 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.footer-social a {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: var(--moneva-primary);
+}
+
+@media (max-width: 991px) {
+  .hero-section {
+    padding-top: 120px;
+  }
+
+  .floating-card {
+    display: none;
+  }
+
+  .cta-card,
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-actions .btn,
+  .cta-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-stats {
+    gap: 1rem;
+  }
+
+  .phone-card {
+    min-height: auto;
+  }
+}
